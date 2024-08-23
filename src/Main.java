@@ -10,8 +10,10 @@ import arrays_and_hashing.valid_sudoku.ValidSudoku;
 import stack.generate_parentheses.GenerateParentheses;
 import stack.reverse_polish_notation.RPN;
 import stack.valid_parentheses.ValidParentheses;
-import trees.BinarySearchTree;
-import trees.Node;
+import trees.AVL.AVLTree;
+import trees.AVL.NodeAVL;
+import trees.BST.BinarySearchTree;
+import trees.BST.Node;
 import two_pointers.container_with_most_water.ContainerWithMostWater;
 import two_pointers.three_sum.ThreeSum;
 import two_pointers.trapping_rain_water.TrappingRainWater;
@@ -175,7 +177,49 @@ public class Main {
         tree.insert(new Node(4));
         tree.insert(new Node(8));
 
+        tree.remove(1);
         tree.display();
+        System.out.println("\n\n\n");
+
+        // Create an instance of AVLTree
+        AVLTree avlTree = new AVLTree();
+
+        // Insert elements into the AVL tree
+        System.out.println("Inserting elements: 10, 20, 30, 40, 50, 25");
+        avlTree.insert(10);
+        avlTree.insert(20);
+        avlTree.insert(30);
+        avlTree.insert(40);
+        avlTree.insert(50);
+        avlTree.insert(25);
+
+        // Print the root and height of the tree
+        System.out.println("Root of AVL Tree: " + avlTree.getRoot().getKey());
+        System.out.println("Height of AVL Tree: " + avlTree.height());
+
+        // Find elements in the AVL tree
+        int keyToFind = 30;
+        NodeAVL foundNode = avlTree.find(keyToFind);
+        System.out.println("Finding element " + keyToFind + ": " + (foundNode != null ? "Found" : "Not Found"));
+
+        keyToFind = 60;
+        foundNode = avlTree.find(keyToFind);
+        System.out.println("Finding element " + keyToFind + ": " + (foundNode != null ? "Found" : "Not Found"));
+
+        // Delete an element from the AVL tree
+        int keyToDelete = 50;
+        System.out.println("Deleting element " + keyToDelete);
+        avlTree.delete(keyToDelete);
+
+        // Print the root and height of the tree after deletion
+        System.out.println("Root of AVL Tree after deletion: " + avlTree.getRoot().getKey());
+        System.out.println("Height of AVL Tree after deletion: " + avlTree.height());
+
+        // Find the deleted element to ensure it was removed
+        foundNode = avlTree.find(keyToDelete);
+        System.out.println("Finding deleted element " + keyToDelete + ": " + (foundNode != null ? "Found" : "Not Found"));
+
+
 
     }
 }
