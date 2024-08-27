@@ -7,6 +7,7 @@ import arrays_and_hashing.top_k_frequent_elements.TopKFrequentElements;
 import arrays_and_hashing.two_sum.TwoSum;
 import arrays_and_hashing.valid_anagram.ValidAnagram;
 import arrays_and_hashing.valid_sudoku.ValidSudoku;
+import others.LexicalOrderWord;
 import stack.generate_parentheses.GenerateParentheses;
 import stack.reverse_polish_notation.RPN;
 import stack.valid_parentheses.ValidParentheses;
@@ -219,6 +220,10 @@ public class Main {
         foundNode = avlTree.find(keyToDelete);
         System.out.println("Finding deleted element " + keyToDelete + ": " + (foundNode != null ? "Found" : "Not Found"));
 
+        //----------
+        System.out.println("\n");
+        String w = LexicalOrderWord.getSmallestWordLexicographicallyLargerThanGiven("abdc");
+        System.out.println(w);
 
 
     }
