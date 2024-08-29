@@ -178,9 +178,16 @@ public class Main {
         tree.insert(new Node(4));
         tree.insert(new Node(8));
 
-        tree.remove(1);
+        //tree.remove(1);
         tree.display();
-        System.out.println("\n\n\n");
+        System.out.println("\n");
+        tree.inorderTraversal(tree.getRoot());
+        System.out.println("\n");
+        tree.postorderTraversal(tree.getRoot());
+        System.out.println("\n");
+        tree.preorderTraversal(tree.getRoot());
+        System.out.println("\n");
+
 
         // Create an instance of AVLTree
         AVLTree avlTree = new AVLTree();

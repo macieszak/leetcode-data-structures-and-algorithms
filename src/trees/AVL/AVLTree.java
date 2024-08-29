@@ -19,18 +19,6 @@ public class AVLTree {
         root = insert(root, key);
     }
 
-    public void delete(int key) {
-        root = delete(root, key);
-    }
-
-    public NodeAVL getRoot() {
-        return root;
-    }
-
-    public int height() {
-        return root == null ? -1 : root.height;
-    }
-
     private NodeAVL insert(NodeAVL root, int key) {
         if (root == null) {
             return new NodeAVL(key);
@@ -42,6 +30,39 @@ public class AVLTree {
             throw new RuntimeException("duplicate Key!");
         }
         return rebalance(root);
+    }
+
+    private NodeAVL rebalance(NodeAVL z) {
+        updateHeight(z);
+        int balance = getBalance(z);
+        if (balance > 1) {
+            if (height(z.right.right) > height(z.right.left)) {
+                z = rotateLeft(z);
+            } else {
+                z.right = rotateRight(z.right);
+                z = rotateLeft(z);
+            }
+        } else if (balance < -1) {
+            if (height(z.left.left) > height(z.left.right)) {
+                z = rotateRight(z);
+            } else {
+                z.left = rotateLeft(z.left);
+                z = rotateRight(z);
+            }
+        }
+        return z;
+    }
+
+    public void delete(int key) {
+        root = delete(root, key);
+    }
+
+    public NodeAVL getRoot() {
+        return root;
+    }
+
+    public int height() {
+        return root == null ? -1 : root.height;
     }
 
     private NodeAVL delete(NodeAVL node, int key) {
@@ -73,27 +94,6 @@ public class AVLTree {
             current = current.left;
         }
         return current;
-    }
-
-    private NodeAVL rebalance(NodeAVL z) {
-        updateHeight(z);
-        int balance = getBalance(z);
-        if (balance > 1) {
-            if (height(z.right.right) > height(z.right.left)) {
-                z = rotateLeft(z);
-            } else {
-                z.right = rotateRight(z.right);
-                z = rotateLeft(z);
-            }
-        } else if (balance < -1) {
-            if (height(z.left.left) > height(z.left.right)) {
-                z = rotateRight(z);
-            } else {
-                z.left = rotateLeft(z.left);
-                z = rotateRight(z);
-            }
-        }
-        return z;
     }
 
     private NodeAVL rotateRight(NodeAVL y) {
