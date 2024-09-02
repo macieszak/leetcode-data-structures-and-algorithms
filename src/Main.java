@@ -21,8 +21,13 @@ import two_pointers.trapping_rain_water.TrappingRainWater;
 import two_pointers.two_sum_array_sorted.TwoSumArraySorted;
 import two_pointers.valid_palindrome.ValidPalindrome;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static searching_algorithms.BreadthFirstSearch.addEdge;
+import static searching_algorithms.BreadthFirstSearch.bfs;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -231,6 +236,31 @@ public class Main {
         System.out.println("\n");
         String w = LexicalOrderWord.getSmallestWordLexicographicallyLargerThanGiven("abdc");
         System.out.println(w);
+
+
+        //BFS
+        // Number of vertices in the graph
+        int V = 5;
+
+        // Adjacency list representation of the graph
+        List<List<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < V; i++) {
+            adj.add(new ArrayList<>());
+        }
+
+        // Add edges to the graph
+        addEdge(adj, 0, 1);
+        addEdge(adj, 0, 2);
+        addEdge(adj, 1, 3);
+        addEdge(adj, 1, 4);
+        addEdge(adj, 2, 4);
+
+        // Mark all the vertices as not visited
+        boolean[] visited = new boolean[V];
+
+        // Perform BFS traversal starting from vertex 0
+        System.out.println("BFS starting from 0 : ");
+        bfs(adj, 0, visited);
 
 
     }
