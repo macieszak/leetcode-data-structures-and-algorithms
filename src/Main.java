@@ -27,6 +27,8 @@ import java.util.List;
 
 import static searching_algorithms.BreadthFirstSearch.addEdge;
 import static searching_algorithms.BreadthFirstSearch.bfs;
+import static searching_algorithms.DepthFirstSearch.DFS;
+import static searching_algorithms.DepthFirstSearch.addEdgeDFS;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -236,7 +238,7 @@ public class Main {
         System.out.println("\n");
         String w = LexicalOrderWord.getSmallestWordLexicographicallyLargerThanGiven("abdc");
         System.out.println(w);
-
+        System.out.println();
 
         //BFS
         // Number of vertices in the graph
@@ -262,6 +264,29 @@ public class Main {
         System.out.println("BFS starting from 0 : ");
         bfs(adj, 0, visited);
 
+        //DFS
+        System.out.println("\n\n");
+        int VDfs = 5; // Number of vertices in the graph
+
+        // Create an adjacency list for the graph
+        List<List<Integer> > adjDFS = new ArrayList<>(V);
+        for (int i = 0; i < VDfs; i++) {
+            adjDFS.add(new ArrayList<>());
+        }
+
+        // Define the edges of the graph
+        int[][] edges = {
+                { 1, 2 }, { 1, 0 }, { 2, 0 }, { 2, 3 }, { 2, 4 }
+        };
+
+        // Populate the adjacency list with edges
+        for (int[] e : edges) {
+            addEdgeDFS(adjDFS, e[0], e[1]);
+        }
+
+        int source = 1;
+        System.out.println("DFS from source: " + source);
+        DFS(adjDFS, source);
 
     }
 }
