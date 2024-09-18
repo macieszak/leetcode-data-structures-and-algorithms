@@ -8,8 +8,8 @@ import arrays_and_hashing.two_sum.TwoSum;
 import arrays_and_hashing.valid_anagram.ValidAnagram;
 import arrays_and_hashing.valid_sudoku.ValidSudoku;
 import others.LexicalOrderWord;
-import shortest_path.Dijkstra;
-import shortest_path.Graph;
+import shortest_path.dijkstra.Dijkstra;
+import shortest_path.dijkstra.Graph;
 import stack.generate_parentheses.GenerateParentheses;
 import stack.reverse_polish_notation.RPN;
 import stack.valid_parentheses.ValidParentheses;
@@ -291,12 +291,12 @@ public class Main {
         DFS(adjDFS, source);
         System.out.println();
 
-        shortest_path.Node nodeA = new shortest_path.Node("A");
-        shortest_path.Node nodeB = new shortest_path.Node("B");
-        shortest_path.Node nodeC = new shortest_path.Node("C");
-        shortest_path.Node nodeD = new shortest_path.Node("D");
-        shortest_path.Node nodeE = new shortest_path.Node("E");
-        shortest_path.Node nodeF = new shortest_path.Node("F");
+        shortest_path.dijkstra.Node nodeA = new shortest_path.dijkstra.Node("A");
+        shortest_path.dijkstra.Node nodeB = new shortest_path.dijkstra.Node("B");
+        shortest_path.dijkstra.Node nodeC = new shortest_path.dijkstra.Node("C");
+        shortest_path.dijkstra.Node nodeD = new shortest_path.dijkstra.Node("D");
+        shortest_path.dijkstra.Node nodeE = new shortest_path.dijkstra.Node("E");
+        shortest_path.dijkstra.Node nodeF = new shortest_path.dijkstra.Node("F");
 
         nodeA.addDestination(nodeB, 10);
         nodeA.addDestination(nodeC, 15);
