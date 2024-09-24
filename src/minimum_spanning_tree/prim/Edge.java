@@ -1,4 +1,4 @@
-package minimum_spanning_tree;
+package minimum_spanning_tree.prim;
 
 public class Edge {
     private int weight;

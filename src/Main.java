@@ -7,8 +7,6 @@ import arrays_and_hashing.top_k_frequent_elements.TopKFrequentElements;
 import arrays_and_hashing.two_sum.TwoSum;
 import arrays_and_hashing.valid_anagram.ValidAnagram;
 import arrays_and_hashing.valid_sudoku.ValidSudoku;
-import minimum_spanning_tree.Prim;
-import minimum_spanning_tree.Vertex;
 import others.LexicalOrderWord;
 import shortest_path.dijkstra.Dijkstra;
 import shortest_path.dijkstra.Graph;
@@ -325,11 +323,13 @@ public class Main {
         graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
 
         System.out.println("\n\n");
-        List<Vertex> primsGraph =  Prim.createGraph();
-        Prim prim = new Prim(primsGraph);
-        prim.run();
-        prim.resetPrintHistory();
-        System.out.println(prim.minimumSpanningTreeToString());
+//        List<Vertex> primsGraph =  Prim.createGraph();
+//        Prim prim = new Prim(primsGraph);
+//        prim.run();
+//        prim.resetPrintHistory();
+//        System.out.println(prim.minimumSpanningTreeToString());
+
+
 
 
 
