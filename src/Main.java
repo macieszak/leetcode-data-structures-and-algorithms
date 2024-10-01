@@ -127,6 +127,9 @@ public class Main {
         String validPalindrome = "A man, a plan, a canal: Panama";
         boolean validPalindromeResult = ValidPalindrome.isPalindrome(validPalindrome);
         System.out.println("Valid palindrome result: " + validPalindromeResult);
+        boolean validPalindromeSecondVersion = ValidPalindrome.isAnagramTwoPointers(validPalindrome);
+        System.out.println("Valid palindrome result, version 2: " + validPalindromeSecondVersion);
+
         //Two Sum II - Input Array Is Sorted
         int[] twoSum = {2, 7, 11, 15};
         int targetTwoSum = 9;

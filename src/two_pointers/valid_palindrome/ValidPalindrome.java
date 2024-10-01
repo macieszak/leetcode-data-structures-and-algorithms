@@ -16,5 +16,21 @@ public class ValidPalindrome {
         return Arrays.equals(palindromeTab, reversePalindromeTab);
     }
 
+    public static boolean isAnagramTwoPointers(String s) {
+        s = s.toLowerCase();
+        s = s.replaceAll("[^a-zA-Z0-9]", "");
+        char[] anagram = s.toLowerCase().toCharArray();
+        int start = 0;
+        int end = anagram.length - 1;
+
+        while (start < end) {
+            if (anagram[start] != anagram[end]) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
 
 }
