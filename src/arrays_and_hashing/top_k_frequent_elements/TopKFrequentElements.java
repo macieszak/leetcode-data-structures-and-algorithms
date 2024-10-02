@@ -15,7 +15,6 @@ public class TopKFrequentElements {
                 topKFrequentMap.put(num, 1);
             }
         }
-
         LinkedHashMap<Integer, Integer> sortedByValue = topKFrequentMap.entrySet()
                 .stream()
                 .sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
@@ -24,7 +23,6 @@ public class TopKFrequentElements {
                         Map.Entry::getValue,
                         (e1, e2) -> e1,
                         LinkedHashMap::new));
-
         int[] returnTab = new int[k];
         Set<Integer> integers = sortedByValue.keySet();
         int i = 0;
@@ -37,6 +35,5 @@ public class TopKFrequentElements {
         }
         return returnTab;
     }
-
 
 }

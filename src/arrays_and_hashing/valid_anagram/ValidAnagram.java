@@ -7,10 +7,8 @@ public class ValidAnagram {
     public static boolean validAnagramMethod(String s, String t) {
         char[] firstWordTab = s.toCharArray();
         char[] secondWordTab = t.toCharArray();
-
         Arrays.sort(firstWordTab);
         Arrays.sort(secondWordTab);
-
         return Arrays.equals(firstWordTab, secondWordTab);
     }
 
