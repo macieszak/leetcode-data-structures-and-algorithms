@@ -1,27 +1,27 @@
-import arrays_and_hashing.contains_duplicate.ContainsDuplicate;
-import arrays_and_hashing.group_anagrams.GroupAnagrams;
-import arrays_and_hashing.longest_consecutive_sequence.LongestConsecutiveSequence;
-import arrays_and_hashing.product_of_array_except_self.ProductOfArrayExceptSelf;
-import arrays_and_hashing.string_encode_and_decode.StringEncodeAndDecode;
-import arrays_and_hashing.top_k_frequent_elements.TopKFrequentElements;
-import arrays_and_hashing.two_sum.TwoSum;
-import arrays_and_hashing.valid_anagram.ValidAnagram;
-import arrays_and_hashing.valid_sudoku.ValidSudoku;
+import leetcode_problems.arrays_and_hashing.contains_duplicate.ContainsDuplicate;
+import leetcode_problems.arrays_and_hashing.group_anagrams.GroupAnagrams;
+import leetcode_problems.arrays_and_hashing.longest_consecutive_sequence.LongestConsecutiveSequence;
+import leetcode_problems.arrays_and_hashing.product_of_array_except_self.ProductOfArrayExceptSelf;
+import leetcode_problems.arrays_and_hashing.string_encode_and_decode.StringEncodeAndDecode;
+import leetcode_problems.arrays_and_hashing.top_k_frequent_elements.TopKFrequentElements;
+import leetcode_problems.arrays_and_hashing.two_sum.TwoSum;
+import leetcode_problems.arrays_and_hashing.valid_anagram.ValidAnagram;
+import leetcode_problems.arrays_and_hashing.valid_sudoku.ValidSudoku;
 import others.LexicalOrderWord;
 import shortest_path.dijkstra.Dijkstra;
 import shortest_path.dijkstra.Graph;
-import stack.generate_parentheses.GenerateParentheses;
-import stack.reverse_polish_notation.RPN;
-import stack.valid_parentheses.ValidParentheses;
+import leetcode_problems.stack.generate_parentheses.GenerateParentheses;
+import leetcode_problems.stack.reverse_polish_notation.RPN;
+import leetcode_problems.stack.valid_parentheses.ValidParentheses;
 import trees.AVL.AVLTree;
 import trees.AVL.NodeAVL;
 import trees.BST.BinarySearchTree;
 import trees.BST.Node;
-import two_pointers.container_with_most_water.ContainerWithMostWater;
-import two_pointers.three_sum.ThreeSum;
-import two_pointers.trapping_rain_water.TrappingRainWater;
-import two_pointers.two_sum_array_sorted.TwoSumArraySorted;
-import two_pointers.valid_palindrome.ValidPalindrome;
+import leetcode_problems.two_pointers.container_with_most_water.ContainerWithMostWater;
+import leetcode_problems.two_pointers.three_sum.ThreeSum;
+import leetcode_problems.two_pointers.trapping_rain_water.TrappingRainWater;
+import leetcode_problems.two_pointers.two_sum_array_sorted.TwoSumArraySorted;
+import leetcode_problems.two_pointers.valid_palindrome.ValidPalindrome;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ import java.util.List;
 import static searching_algorithms.BreadthFirstSearch.addEdge;
 import static searching_algorithms.BreadthFirstSearch.bfs;
 import static searching_algorithms.DepthFirstSearch.DFS;
-import static searching_algorithms.DepthFirstSearch.addEdgeDFS;
+import static dsa.searching_algorithms.DepthFirstSearch.addEdgeDFS;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -156,7 +156,7 @@ public class Main {
         String validParentheses = "{[]}";
         System.out.println(ValidParentheses.isValidFirstApproach(validParentheses));
         System.out.println(ValidParentheses.isValidSecondApproach(validParentheses));
-        //min stack
+        //min leetcode_problems.stack
         //...
         //evaluate reverse polish notation
         String[] tokens = {"2", "1", "+", "3", "*"};
