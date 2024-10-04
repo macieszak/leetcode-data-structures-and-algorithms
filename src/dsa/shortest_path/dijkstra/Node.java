@@ -1,4 +1,4 @@
-package shortest_path.dijkstra;
+package dsa.shortest_path.dijkstra;
 
 import java.util.HashMap;
 import java.util.LinkedList;

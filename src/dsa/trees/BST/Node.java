@@ -1,4 +1,4 @@
-package trees.BST;
+package dsa.trees.BST;
 
 public class Node {
 

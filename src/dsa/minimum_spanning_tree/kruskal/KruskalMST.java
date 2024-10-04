@@ -1,4 +1,4 @@
-package minimum_spanning_tree.kruskal;
+package dsa.minimum_spanning_tree.kruskal;
 
 import java.util.ArrayList;
 import java.util.Comparator;

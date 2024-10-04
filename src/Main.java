@@ -1,3 +1,10 @@
+import dsa.others.LexicalOrderWord;
+import dsa.shortest_path.dijkstra.Dijkstra;
+import dsa.shortest_path.dijkstra.Graph;
+import dsa.trees.AVL.AVLTree;
+import dsa.trees.AVL.NodeAVL;
+import dsa.trees.BST.BinarySearchTree;
+import dsa.trees.BST.Node;
 import leetcode_problems.arrays_and_hashing.contains_duplicate.ContainsDuplicate;
 import leetcode_problems.arrays_and_hashing.group_anagrams.GroupAnagrams;
 import leetcode_problems.arrays_and_hashing.longest_consecutive_sequence.LongestConsecutiveSequence;
@@ -7,16 +14,9 @@ import leetcode_problems.arrays_and_hashing.top_k_frequent_elements.TopKFrequent
 import leetcode_problems.arrays_and_hashing.two_sum.TwoSum;
 import leetcode_problems.arrays_and_hashing.valid_anagram.ValidAnagram;
 import leetcode_problems.arrays_and_hashing.valid_sudoku.ValidSudoku;
-import others.LexicalOrderWord;
-import shortest_path.dijkstra.Dijkstra;
-import shortest_path.dijkstra.Graph;
 import leetcode_problems.stack.generate_parentheses.GenerateParentheses;
 import leetcode_problems.stack.reverse_polish_notation.RPN;
 import leetcode_problems.stack.valid_parentheses.ValidParentheses;
-import trees.AVL.AVLTree;
-import trees.AVL.NodeAVL;
-import trees.BST.BinarySearchTree;
-import trees.BST.Node;
 import leetcode_problems.two_pointers.container_with_most_water.ContainerWithMostWater;
 import leetcode_problems.two_pointers.three_sum.ThreeSum;
 import leetcode_problems.two_pointers.trapping_rain_water.TrappingRainWater;
@@ -27,15 +27,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static searching_algorithms.BreadthFirstSearch.addEdge;
-import static searching_algorithms.BreadthFirstSearch.bfs;
-import static searching_algorithms.DepthFirstSearch.DFS;
+import static dsa.searching_algorithms.BreadthFirstSearch.addEdge;
+import static dsa.searching_algorithms.BreadthFirstSearch.bfs;
+import static dsa.searching_algorithms.DepthFirstSearch.DFS;
 import static dsa.searching_algorithms.DepthFirstSearch.addEdgeDFS;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+    private static Node nodeA;
+
     public static void main(String[] args) {
         //==============================================================================================================
         // SORTING ALGORITHMS
@@ -294,12 +297,12 @@ public class Main {
         DFS(adjDFS, source);
         System.out.println();
 
-        shortest_path.dijkstra.Node nodeA = new shortest_path.dijkstra.Node("A");
-        shortest_path.dijkstra.Node nodeB = new shortest_path.dijkstra.Node("B");
-        shortest_path.dijkstra.Node nodeC = new shortest_path.dijkstra.Node("C");
-        shortest_path.dijkstra.Node nodeD = new shortest_path.dijkstra.Node("D");
-        shortest_path.dijkstra.Node nodeE = new shortest_path.dijkstra.Node("E");
-        shortest_path.dijkstra.Node nodeF = new shortest_path.dijkstra.Node("F");
+        dsa.shortest_path.dijkstra.Node nodeA = new dsa.shortest_path.dijkstra.Node("A");
+        dsa.shortest_path.dijkstra.Node nodeB = new dsa.shortest_path.dijkstra.Node("B");
+        dsa.shortest_path.dijkstra.Node nodeC = new dsa.shortest_path.dijkstra.Node("C");
+        dsa.shortest_path.dijkstra.Node nodeD = new dsa.shortest_path.dijkstra.Node("D");
+        dsa.shortest_path.dijkstra.Node nodeE = new dsa.shortest_path.dijkstra.Node("E");
+        dsa.shortest_path.dijkstra.Node nodeF = new dsa.shortest_path.dijkstra.Node("F");
 
         nodeA.addDestination(nodeB, 10);
         nodeA.addDestination(nodeC, 15);

@@ -1,4 +1,4 @@
-package searching_algorithms;
+package dsa.searching_algorithms;
 
 public class BinarySearch {
 

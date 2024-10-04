@@ -1,4 +1,4 @@
-package sorting_algorithms;
+package dsa.sorting_algorithms;
 
 public class InsertionSort {
 

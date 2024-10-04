@@ -1,4 +1,4 @@
-package others;
+package dsa.others;
 
 public class LexicalOrderWord {
 

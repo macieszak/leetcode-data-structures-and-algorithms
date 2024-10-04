@@ -1,4 +1,4 @@
-package trees.AVL;
+package dsa.trees.AVL;
 
 public class NodeAVL {
 

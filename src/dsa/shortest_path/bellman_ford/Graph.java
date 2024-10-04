@@ -1,4 +1,4 @@
-package shortest_path.bellman_ford;
+package dsa.shortest_path.bellman_ford;
 
 class Graph {
 
