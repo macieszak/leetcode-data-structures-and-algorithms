@@ -16,19 +16,12 @@ public class GenerateParentheses {
             outputArr.add(currentString);
             return;
         }
-
         if (open < max){
             backtrack(outputArr, currentString + "(", open + 1, close, max);
         }
-
         if (close < open) {
             backtrack(outputArr, currentString + ")", open, close + 1, max);
         }
     }
-
-
-
-
-
 
 }
