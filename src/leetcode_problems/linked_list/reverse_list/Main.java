@@ -1,4 +1,4 @@
-package leetcode_problems.linked_list;
+package leetcode_problems.linked_list.reverse_list;
 
 public class Main {
 
