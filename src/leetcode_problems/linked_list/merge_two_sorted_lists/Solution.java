@@ -9,6 +9,27 @@ class Solution {
 
     private List<ListNode> nodesList;
 
+    public ListNode mergeTwoListsOptimal(ListNode firstHead, ListNode secondHead) {
+        ListNode preHead = new ListNode(0);
+        ListNode last = preHead;
+        while (firstHead != null && secondHead != null) {
+            if (firstHead.getVal() > secondHead.getVal()) {
+                last.setNext(secondHead);
+                secondHead = secondHead.getNext();
+            } else {
+                last.setNext(firstHead);
+                firstHead = firstHead.getNext();
+            }
+            last = last.getNext();
+        }
+        if (firstHead == null) {
+            last.setNext(secondHead);
+        } else {
+            last.setNext(firstHead);
+        }
+        return preHead.getNext();
+    }
+
     public ListNode mergeTwoLists(ListNode firstHead, ListNode secondHead) {
         if (firstHead == null && secondHead == null) {
             return new ListNode();
@@ -21,7 +42,7 @@ class Solution {
             } else if (secondHead == null) {
                 nodesList.add(firstHead);
                 firstHead = firstHead.getNext();
-            } else if (firstHead.getVal() < secondHead.getVal() || firstHead.getVal() == secondHead.getVal()) {
+            } else if (firstHead.getVal() <= secondHead.getVal()) {
                 nodesList.add(firstHead);
                 firstHead = firstHead.getNext();
             } else {

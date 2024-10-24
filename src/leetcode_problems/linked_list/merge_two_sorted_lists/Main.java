@@ -18,16 +18,21 @@ public class Main {
         ListNode headOfSecondList = new ListNode(1);
         ListNode secondOfSecondList = new ListNode(3);
         ListNode thirdOfSecondList = new ListNode(4);
+        ListNode fourthOfSecondList = new ListNode(5);
 
         headOfSecondList.setNext(secondOfSecondList);
         secondOfSecondList.setNext(thirdOfSecondList);
-        thirdOfSecondList.setNext(null);
+        thirdOfSecondList.setNext(fourthOfSecondList);
+        fourthOfSecondList.setNext(null);
 
         Solution solution = new Solution();
-        ListNode finalNode = solution.mergeTwoLists(headOfFirstList, headOfSecondList);
+/*        ListNode finalNode = solution.mergeTwoLists(headOfFirstList, headOfSecondList);
         System.out.println("final head node: " + finalNode.getVal() + "\n");
 
-        solution.showNewMergedList();
+        solution.showNewMergedList();*/
+
+        ListNode optimalSolution = solution.mergeTwoListsOptimal(headOfFirstList, headOfSecondList);
+        System.out.println(optimalSolution.getVal());
 
     }
 
